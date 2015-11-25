@@ -37,7 +37,7 @@ Mesh::Mesh(osg::Vec3 pos, int w, int h, int d){
 	width = w;
 	height = h;
 	depth = d;
-	densities[w][h][d];
+	densities = std::vector<float>();
 }
 
 Mesh::~Mesh(){
@@ -47,10 +47,12 @@ Mesh::~Mesh(){
 float Mesh::getDensity(float x, float y, float z, bool local){
 	if (x < 0 || y < 0 || z < 0 || x >= width || y >= height || z >= depth)
 		return 0;
-	if (local)
+	float d = 1.f - (x*x + y*y + z*z) / 25.f;
+	return d;
+	/*if (local)
 		return densities[(int)x][(int)y][(int)z];
 	else
-		return densities[(int)(x - position.x())][(int)(y - position.y())][(int)(z - position.z())];
+		return densities[(int)(x - position.x())][(int)(y - position.y())][(int)(z - position.z())];*/
 }
 
 // returns whether x is above density threshold
@@ -68,7 +70,7 @@ osg::Vec3 Mesh::cLerp(corner c1, corner c2){
 	return c1.pos + ((c2.pos - c1.pos) * mu);
 }
 
-void Mesh::buildVoxel(float x, float y, float z, osg::Vec3* verts, osg::Vec3* norms, int* inds){
+void Mesh::buildVoxel(float x, float y, float z){
 	float s = 1;
 	corner corners[] = {
 		corner(getDensity(x, y, z),				osg::Vec3(x, y, z)),			// 0
@@ -81,6 +83,7 @@ void Mesh::buildVoxel(float x, float y, float z, osg::Vec3* verts, osg::Vec3* no
 		corner(getDensity(x + s, y + s, z + s), osg::Vec3(x + s, y + s, z + s)),// 6
 		corner(getDensity(x + s, y, z + s),		osg::Vec3(x + s, y, z + s))		// 7
 	};
+
 
 	// create index
 	int index = 0;
@@ -132,34 +135,12 @@ void Mesh::buildVoxel(float x, float y, float z, osg::Vec3* verts, osg::Vec3* no
 		osg::Vec3 v3 = vts[Triangles[index][i + 2]];
 		osg::Vec3 norm = (v1 - v3) ^ (v1 - v2);
 
-		osg::Vec3 pts[3] = { v1, v3, v2 };
+		meshVerts->push_back(v1);
+		meshVerts->push_back(v3);
+		meshVerts->push_back(v2);
 
-		// for each point in pts, if another vertex already exists there, create index, if not, create index and vertex
-		for (int j = 0; j < 3; j++){/*
-			int ind = -1;
-			for (int k = numVert - 1; k >= 0; k--){ // go through backwards, because most recent voxels probably have the vertex in question
-				if ((verts[k] - pts[j]).length() < .05){
-					// vertex found
-					ind = k;
-					//verts[k] = Vertex(verts[k].Position, verts[k].Normal + norm, hVec3(1, 0, 0));
-					norms[k] += norm;
-				}
-			}
-			if (ind == -1){
-				// no existing vertex found, make one
-				ind = numVert;
-				//verts[ind] = Vertex(pts[j], norm, hVec3(1, 0, 0));
-
-				verts[ind] = pts[j];
-				norms[ind] = norm;
-				numVert++;
-			}
-			inds[ind] = ind;
-			numInd++;*/
-			meshVerts->push_back(pts[j]);
-			meshNormals->push_back(norm);
-			meshColors->push_back(osg::Vec4(1, 0, 0, 1));
-		}
+		meshNormals->push_back(norm);
+		meshColors->push_back(osg::Vec4(1, 0, 0, 1));
 	}
 }
 
@@ -172,19 +153,13 @@ bool Mesh::generate(){
 	meshVerts = new osg::Vec3Array();
 	meshDefVerts = new osg::Vec3Array();
 	meshOrigVerts = new osg::Vec3Array();
-	//meshIndicies = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES, 1);
+	meshIndicies = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES);
 
-	meshNormals->setBinding(osg::Array::BIND_PER_VERTEX);
-	meshColors->setBinding(osg::Array::BIND_PER_VERTEX);
+	meshNormals->setBinding(osg::Array::BIND_PER_PRIMITIVE_SET);
+	meshColors->setBinding(osg::Array::BIND_PER_PRIMITIVE_SET);
 	
 	numVert = 0;
 	numInd = 0;
-
-	printf("creating arrays\n");
-	
-	//osg::Vec3 verts[16384];
-	//osg::Vec3 norms[16384];
-	//int inds[16384];
 	
 	printf("building voxels\n");
 	// build mesh
@@ -192,38 +167,21 @@ bool Mesh::generate(){
 	for (int x = 0; x < width; x++){
 		for (int y = 0; y < height; y++){
 			for (int z = 0; z < depth; z++){
-				buildVoxel(x, y, z, 0, 0, 0);// verts, norms, inds);
+				buildVoxel(x, y, z);// verts, norms, inds);
 				i++;
 			}
 		}
 		//printf("building voxels %d%% \n", (int)((i/(float)(width*height*depth)*100)));
 	}
 	printf("%d triangles\n", meshVerts->size());
-	/*
-	printf("copying vertex data\n");
-
-	vertDeforms[numVert];
-	
-	for (int i = 0; i < numVert; i++){
-		meshVerts->push_back(verts[i]);
-		meshDefVerts->push_back(verts[i]);
-		meshOrigVerts->push_back(verts[i]);
-		meshNormals->push_back(norms[i]);
-		meshColors->push_back(osg::Vec4(1, 0, 0, 1));
-	}
-	printf("copying index data\n");
-	for (int i = 0; i < numInd; i++){
-		meshIndicies->push_back(inds[i]);
-	}*/
-
 	printf("registering with osg\n");
 	
 	meshGeometry = new osg::Geometry();
 	meshGeometry->setUseDisplayList(false);
 	meshGeometry->setVertexArray(meshVerts);
 	meshGeometry->setColorArray(meshColors);
-	//meshGeometry->addPrimitiveSet(meshIndicies);
 	meshGeometry->setNormalArray(meshNormals);
+	//meshGeometry->addPrimitiveSet(meshIndicies);
 
 	meshGeometry->setColorBinding(osg::Geometry::BIND_PER_VERTEX);
 	meshGeometry->setNormalBinding(osg::Geometry::BIND_PER_VERTEX);
@@ -242,7 +200,7 @@ bool Mesh::generate(){
 
 	meshSceneObject->setTransform(transform);
 
-	printf("%d , %d , %d \n", position.x(), position.y(), position.z());
+	printf("%f, %f, %f\n", position[0], position[1], position[2]);
 	/*
 	// build surface graph
 	nodes[numVert];

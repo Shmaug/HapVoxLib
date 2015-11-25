@@ -328,19 +328,19 @@ namespace hvl{
 		int width;
 		int height;
 		int depth;
-		float densities[1][1][1];
 		bool built;
+		std::vector<float> densities;
 
 		osg::Vec3 position;
 
 		int numInd;
 		int numVert;
 
-		osg::Geode* meshGeode;// = new osg::Geode();
+		osg::Geode* meshGeode;
 		osg::Geometry* meshGeometry;
 		osg::Vec3Array* meshVerts;
 		osg::Vec3Array* meshNormals; // stores vertex deformities
-		osg::Vec4Array* meshColors; // stores vertex deformities
+		osg::Vec4Array* meshColors;
 		osg::DrawElementsUInt* meshIndicies;
 
 		cvr::SceneObject* meshSceneObject;
@@ -358,7 +358,7 @@ namespace hvl{
 		bool isSolid(float x);
 		
 		static osg::Vec3 cLerp(corner c1, corner c2);
-		void buildVoxel(float x, float y, float z, osg::Vec3* verts, osg::Vec3* norms, int* inds);
+		void buildVoxel(float x, float y, float z);
 		bool generate();
 		void recalcNorms(bool* updatelist);
 		void Update(float deltaSeconds);
