@@ -1,0 +1,14 @@
+﻿Build started 12/3/2015 10:27:50 PM.
+     1>Project "C:\Users\trevo\Desktop\HapVoxLib\HapVoxLib\HapVoxLib.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\trevo\Desktop\HapVoxLib\x64\Debug\HapVoxLib.dll" /INCREMENTAL /NOLOGO CalVRALL.lib hd.lib osgd.lib "ITKIOImageBase-4.9.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\trevo\Desktop\HapVoxLib\x64\Debug\HapVoxLib.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\trevo\Desktop\HapVoxLib\x64\Debug\HapVoxLib.lib" /MACHINE:X64 /DLL x64\Debug\Haptics.obj
+         x64\Debug\HapVoxCVR.obj
+         x64\Debug\hvlIO.obj
+         x64\Debug\Mesh.obj
+         x64\Debug\simplexnoise.obj
+     1>ITKIOImageBase-4.9.lib(itkImageIOBase.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
+     1>Done Building Project "C:\Users\trevo\Desktop\HapVoxLib\HapVoxLib\HapVoxLib.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.17

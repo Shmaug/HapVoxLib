@@ -1,6 +1,7 @@
 #include "Haptics.h"
 #include <Windows.h>
 #include "HapVoxCVR.h"
+#include "hvlIO.h"
 
 #include <iostream>
 #include <cstring>
@@ -42,6 +43,9 @@ HDCallbackCode HDCALLBACK HapVoxCallback(void *data){
 
 bool HapVoxCVR::init(){
 	printf("HapVoxLib Initializing\n");
+	cvr::PluginHelper::setClearColor(osg::Vec4(.3f,.3f,.3f, 1));
+	Haptics::init();
+
 	/*
 	HDErrorInfo error;
 	hvl::hHD = hdInitDevice(HD_DEFAULT_DEVICE);
@@ -55,82 +59,25 @@ bool HapVoxCVR::init(){
 	updatehandle = hdScheduleAsynchronous(HapVoxCallback, this, HD_MAX_SCHEDULER_PRIORITY);
 	hdEnable(HD_FORCE_OUTPUT);
 	hdStartScheduler();
-	
-	printf("Generating mesh\n");
-	Mesh* m = new Mesh(osg::Vec3(0, 0, -10), 10, 10, 10);
-	m->generate();
 	*/
-	//printf("adding mesh\n");
-	//Haptics::addMesh(m);
-	osg::Group* root = new osg::Group();
-	osg::Geometry* geom = new osg::Geometry();
-	osg::Geode* geode = new osg::Geode();
-	
-	geom->setUseDisplayList(false);
-	geode->addDrawable(geom);
-	root->addChild(geode);
 
-	osg::Vec3Array* vArray = new osg::Vec3Array();
-	vArray->push_back(osg::Vec3(0, 0, 0));
-	vArray->push_back(osg::Vec3(10, 0, 0));
-	vArray->push_back(osg::Vec3(10, 10, 0));
-	vArray->push_back(osg::Vec3(0, 10, 0));
-	vArray->push_back(osg::Vec3(5, 5, 10));
-	geom->setVertexArray(vArray);
+	printf("Generating meshes\n");
+	readImage();
 
-	osg::DrawElementsUInt* base = new osg::DrawElementsUInt(osg::PrimitiveSet::QUADS, 0);
-	base->push_back(3);
-	base->push_back(2);
-	base->push_back(1);
-	base->push_back(0);
-	geom->addPrimitiveSet(base);
+	int s = 50;
+	Mesh* m = new Mesh(osg::Vec3(-s / 2.f, -s / 2.f, -s / 2.f), s, s, s);
+	m->shape = Mesh::MESH_SHAPE_DENSITY;
+	m->scale = 30.f;
+	m->size = 20;
+	for (int x = 0; x < s; x++) {
+		for (int y = 0; y < s; y++) {
+			for (int z = 0; z < s; z++) {
+				m->setDensity(x, y, z, 1.f - (osg::Vec3(x, y, z) - osg::Vec3(m->width / 2, m->height / 2, m->depth / 2)).length() / m->size);
+			}
+		}
+	}
+	m->generate();
 
-	osg::DrawElementsUInt* f1 = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES, 0);
-	f1->push_back(0);
-	f1->push_back(1);
-	f1->push_back(4);
-	geom->addPrimitiveSet(f1);
-
-	osg::DrawElementsUInt* f2 = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES, 0);
-	f2->push_back(1);
-	f2->push_back(2);
-	f2->push_back(4);
-	geom->addPrimitiveSet(f2);
-
-	osg::DrawElementsUInt* f3 = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES, 0);
-	f3->push_back(2);
-	f3->push_back(3);
-	f3->push_back(4);
-	geom->addPrimitiveSet(f3);
-
-	osg::DrawElementsUInt* f4 = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES, 0);
-	f4->push_back(3);
-	f4->push_back(0);
-	f4->push_back(4);
-	geom->addPrimitiveSet(f4);
-
-	osg::Vec4Array* colors = new osg::Vec4Array;
-	colors->push_back(osg::Vec4(1.0f, 0.0f, 0.0f, 1.0f)); //index 0 red
-	colors->push_back(osg::Vec4(0.0f, 1.0f, 0.0f, 1.0f)); //index 1 green
-	colors->push_back(osg::Vec4(0.0f, 0.0f, 1.0f, 1.0f)); //index 2 blue
-	colors->push_back(osg::Vec4(1.0f, 1.0f, 1.0f, 1.0f)); //index 3 white 
-	colors->push_back(osg::Vec4(1.0f, 0.0f, 0.0f, 1.0f)); //index 4 red
-
-	geom->setColorArray(colors);
-	geom->setColorBinding(osg::Geometry::BIND_PER_VERTEX);
-
-	root->addChild(geode);
-
-	cvr::SceneObject* so = new cvr::SceneObject("Object", false, false, false, true, true);
-	so->setShowBounds(true);
-	so->addChild(root);
-
-	osg::Matrix trans;
-	trans.makeTranslate(osg::Vec3(0, 0, 15));
-	so->setTransform(trans);
-
-	cvr::PluginHelper::registerSceneObject(so, "Object");
-	
 	printf("HapVoxLib initialized\n");
 
 	return true;
@@ -138,4 +85,8 @@ bool HapVoxCVR::init(){
 
 void HapVoxCVR::preFrame(){
 	Haptics::Update(cvr::PluginHelper::getLastFrameDuration());
+
+	osg::Vec3 pos;
+	osg::Vec3 force;
+	Haptics::doFrame(pos, force);
 }

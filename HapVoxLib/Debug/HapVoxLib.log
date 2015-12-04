@@ -1,0 +1,633 @@
+﻿Build started 12/3/2015 10:27:21 PM.
+     1>Project "C:\Users\trevo\Desktop\HapVoxLib\HapVoxLib\HapVoxLib.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ..\HapVoxCVR.cpp ..\Haptics.cpp ..\Mesh.cpp ..\hvlIO.cpp
+         hvlIO.cpp
+     1>c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2230): error C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2216): note: see declaration of 'std::_Copy_impl'
+         e:\apis\itk\itk\include\itkimagefilereader.hxx(441): note: see reference to function template instantiation '_OutIt std::copy<const float*,float*>(_InIt,_InIt,_OutIt)' being compiled
+                 with
+                 [
+                     _OutIt=float *,
+                     _InIt=const float *
+                 ]
+         e:\apis\itk\itk\include\itkimagefilereader.hxx(353): note: while compiling class template member function 'void itk::ImageFileReader<hImg,itk::DefaultConvertPixelTraits<float>>::GenerateData(void)'
+         c:\users\trevo\desktop\hapvoxlib\hvlio.cpp(10): note: see reference to class template instantiation 'itk::ImageFileReader<hImg,itk::DefaultConvertPixelTraits<float>>' being compiled
+         Mesh.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2146: syntax error: missing ';' before identifier 'GLboolean'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): fatal error C1003: error count exceeds 100; stopping compilation
+         Haptics.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2146: syntax error: missing ';' before identifier 'GLboolean'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): fatal error C1003: error count exceeds 100; stopping compilation
+         HapVoxCVR.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1158): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1159): error C2146: syntax error: missing ';' before identifier 'GLboolean'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1160): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1161): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1162): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1163): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1164): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1165): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1166): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1167): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1168): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1169): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1170): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1171): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1172): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1173): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1174): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1175): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1176): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1177): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1178): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1179): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1180): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1181): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1182): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1183): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1184): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1185): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1186): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1187): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1188): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1189): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1190): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1191): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1192): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1193): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1194): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1195): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1196): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1197): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1198): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1199): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1200): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1201): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1202): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1203): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1204): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1205): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1206): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2144: syntax error: 'void' should be preceded by ';'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): error C2086: 'int WINGDIAPI': redefinition
+         c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1157): note: see declaration of 'WINGDIAPI'
+     1>c:\program files (x86)\windows kits\8.1\include\um\gl\gl.h(1207): fatal error C1003: error count exceeds 100; stopping compilation
+         Generating Code...
+     1>Done Building Project "C:\Users\trevo\Desktop\HapVoxLib\HapVoxLib\HapVoxLib.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.71

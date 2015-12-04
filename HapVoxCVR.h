@@ -15,6 +15,8 @@
 
 #include <HD/hd.h>
 
+#include <vector>
+
 namespace hvl{
 	static HHD hHD;
 	static HDSchedulerHandle updatehandle;

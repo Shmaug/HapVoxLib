@@ -1,9 +1,13 @@
-#include "hVec3.h"
-#include "hMesh.h"
+#include "Mesh.h"
 #include "Haptics.h"
 #include <math.h>
 
 using namespace hvl;
+
+int Haptics::init() {
+	Meshes = std::vector<Mesh>();
+	return 0;
+}
 
 void Haptics::deform(Mesh &mesh, osg::Vec3 point, float p, int vInd, int steps, bool* deformed){
 	// stop deforming if number of steps outward is more then penetration
@@ -22,10 +26,10 @@ void Haptics::deform(Mesh &mesh, osg::Vec3 point, float p, int vInd, int steps, 
 	if (dist > p) return; // distance > penetration
 	dist = 1 - fminf(fmaxf(dist / p, 0), 1);
 	mesh.vertDeforms[vInd] = dist;
-	mesh.meshDefVerts->assign(vInd, point - mesh.position);
+	mesh.meshDefVerts->at(vInd) =  point - mesh.position;
 
-	for (int i = 0; i < mesh.nodes[vInd].numConnections; i++)
-		deform(mesh, point, p, mesh.nodes[vInd].connections[i], steps + 1, deformed);
+	for (int i = 0; i < mesh.nodes[vInd].connections->size(); i++)
+		deform(mesh, point, p, mesh.nodes[vInd].connections->at(i), steps + 1, deformed);
 }
 
 osg::Vec3 Haptics::checkMesh(Mesh &mesh, osg::Vec3 devicePos){
@@ -41,7 +45,7 @@ osg::Vec3 Haptics::checkMesh(Mesh &mesh, osg::Vec3 devicePos){
 			// set insertionvertex to closest vertex
 			insertionPoint = lastPos;
 			float minDist = -1;
-			for (int i = 0; i < mesh.numVert; i++){
+			for (int i = 0; i < mesh.meshVerts->size(); i++){
 				float d = (mesh.meshVerts->at(i) - (insertionPoint - mesh.position)).length();
 				if (d < minDist || minDist == -1){
 					insertionVertex = i;
@@ -51,7 +55,7 @@ osg::Vec3 Haptics::checkMesh(Mesh &mesh, osg::Vec3 devicePos){
 		}
 
 		float push = 1;
-		osg::Vec3 out = (insertionPoint - devicePos);
+		osg::Vec3 out = insertionPoint - devicePos;
 		out.normalize();
 		float penetration = (insertionPoint - devicePos).length();
 
@@ -81,7 +85,7 @@ osg::Vec3 Haptics::checkMesh(Mesh &mesh, osg::Vec3 devicePos){
 			devicePos = insertionPoint - (out * penetration);
 		}
 
-		bool* deformed = new bool[mesh.numVert];
+		bool* deformed = new bool[mesh.meshVerts->size()];
 
 		deform(mesh, devicePos, penetration, insertionVertex, 0, deformed);
 
@@ -92,23 +96,13 @@ osg::Vec3 Haptics::checkMesh(Mesh &mesh, osg::Vec3 devicePos){
 }
 
 void Haptics::doFrame(osg::Vec3 devicePos, osg::Vec3& force){
-	for (int i = 0; i < 32; i++)
-		if (meshes[i] != 0 && (*meshes[i]).built)
-			force += checkMesh(*meshes[i], devicePos);
+	for (int i = 0; i < Meshes.size(); i++)
+		if (Meshes.at(i).built)
+			force += checkMesh(Meshes.at(i), devicePos);
 	lastPos = devicePos;
 }
 
-bool Haptics::addMesh(Mesh m){
-	bool e = false;
-	for (int i = 0; i < 32; i++){
-		if (meshes[i] == 0){
-			meshes[i] = &m;
-			e = true;
-		}
-	}
-	return e;
-}
-
 void Haptics::Update(float dT){
-
+	for (int i = 0; i < Meshes.size(); i++)
+		Meshes.at(i).Update(dT);
 }

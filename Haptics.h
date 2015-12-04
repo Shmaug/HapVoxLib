@@ -1,10 +1,11 @@
-#include "hMesh.h"
+#include "Mesh.h"
+#include <vector>
 
 #ifndef HAPTICS
 #define HAPTICS
 
 namespace hvl{
-	static Mesh* meshes[32];
+	static std::vector<Mesh> Meshes;
 	static osg::Vec3 lastPos;
 	static osg::Vec3 insertionPoint;
 	static int insertionVertex;
@@ -18,7 +19,7 @@ namespace hvl{
 		static osg::Vec3 checkMesh(Mesh &mesh, osg::Vec3 devPos);
 		static void doFrame(osg::Vec3 devPos, osg::Vec3& force);
 		static void Update(float deltaSeconds);
-		static bool addMesh(Mesh m);
+		static int init();
 	};
 }
 
